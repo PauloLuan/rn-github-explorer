@@ -11,6 +11,7 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "test": "jest --watchAll",
+    "test:ci": "jest --maxWorkers=50% --runInBand",
     "prestorybook": "rnstl",
     "storybook": "start-storybook -p 7007",
     "build-storybook": "build-storybook",

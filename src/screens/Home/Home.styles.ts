@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/native'
 
-// import { SignInProps } from '.'
+// import { HomeProps } from '.'
 
 export const Wrapper = styled.SafeAreaView`
   ${() => css`

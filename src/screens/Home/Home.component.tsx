@@ -1,16 +1,13 @@
 import { Button } from '@components/button/button.component'
 import React from 'react'
 import { StatusBar } from 'react-native'
-import * as S from './SignIn.styles'
+import * as S from './Home.styles'
 
-export interface SignInProps {
+export interface HomeProps {
   testId?: string
 }
 
-export const SignIn = ({
-  testId = 'component-SignIn-id',
-  ...props
-}: SignInProps) => {
+export const Home = ({ testId = 'component-home-id', ...props }: HomeProps) => {
   return (
     <S.Wrapper testID={testId} {...props}>
       <StatusBar

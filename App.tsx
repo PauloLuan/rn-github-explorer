@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components/native'
 import theme from '@global/styles/theme'
 import useCachedResources from '@hooks/useCachedResources'
 import useColorScheme from '@hooks/useColorScheme'
-// import Navigation from './navigation'
+import Navigation from './navigation'
 import { StorybookUIRoot } from './storybook'
 
 export default function App() {
@@ -18,8 +18,8 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <SafeAreaProvider>
-        {/* <Navigation colorScheme={colorScheme} /> */}
-        <StorybookUIRoot />
+        <Navigation colorScheme={colorScheme} />
+        {/* <StorybookUIRoot /> */}
         <StatusBar style={colorScheme} />
       </SafeAreaProvider>
     </ThemeProvider>

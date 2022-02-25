@@ -16,6 +16,7 @@ module.exports = function (api) {
             '@hooks': ['./src/hooks'],
             '@navigation': ['./src/navigation'],
             '@screens': ['./src/screens'],
+            '@redux': ['./src/redux'],
             '@types': ['./src/types']
           }
         }

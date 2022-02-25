@@ -44,11 +44,10 @@
       "  const testId = 'component-${1/(.*)/${1:/downcase}/}-id'",
       "",
       "  it('should render the ${1/(.*)/${1:/pascalcase}/} component', async () => {",
-      "    const { queryByTestId, toJSON } = renderWithTheme(",
+      "    const { queryByTestId } = renderWithTheme(",
       "      <${1/(.*)/${1:/pascalcase}/} testId={testId} />",
       "    )",
       "    await waitFor(() => expect(queryByTestId(testId)).toBeTruthy())",
-      "    expect(toJSON()).toMatchSnapshot()",
       "  })",
       "})"
     ],
@@ -78,7 +77,7 @@
     "body": [
       "import { storiesOf } from \"@storybook/react-native\"",
       "import React from \"react\"",
-      "import { ${1/(.*)/${1:/pascalcase}/} } from \"./${1/(.*)/${1:/upcase}/}.component\"",
+      "import { ${1/(.*)/${1:/pascalcase}/} } from \"./${1/(.*)/${1:/pascalcase}/}.component\"",
       "",
       "const args = {",
       "  testId: \"component-${1/(.*)/${1:/downcase}/}-id\",",

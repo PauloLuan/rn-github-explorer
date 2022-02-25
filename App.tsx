@@ -8,6 +8,9 @@ import useColorScheme from '@hooks/useColorScheme'
 import Navigation from './src/navigation'
 import { Provider } from 'react-redux'
 import { store } from '@redux/store'
+import { ApiProvider } from '@reduxjs/toolkit/query/react'
+import { api } from '@redux/repositoriesApi'
+
 // import { StorybookUIRoot } from './storybook'
 
 export default function App() {
@@ -20,11 +23,13 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Provider store={store}>
-        <SafeAreaProvider>
-          <Navigation colorScheme={colorScheme} />
-          {/* <StorybookUIRoot /> */}
-          <StatusBar style={colorScheme} />
-        </SafeAreaProvider>
+        <ApiProvider api={api}>
+          <SafeAreaProvider>
+            <Navigation colorScheme={colorScheme} />
+            {/* <StorybookUIRoot /> */}
+            <StatusBar style={colorScheme} />
+          </SafeAreaProvider>
+        </ApiProvider>
       </Provider>
     </ThemeProvider>
   )

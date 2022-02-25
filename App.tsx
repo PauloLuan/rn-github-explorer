@@ -6,6 +6,8 @@ import theme from '@global/styles/theme'
 import useCachedResources from '@hooks/useCachedResources'
 import useColorScheme from '@hooks/useColorScheme'
 import Navigation from './src/navigation'
+import { Provider } from 'react-redux'
+import { store } from '@redux/store'
 // import { StorybookUIRoot } from './storybook'
 
 export default function App() {
@@ -17,11 +19,13 @@ export default function App() {
   }
   return (
     <ThemeProvider theme={theme}>
-      <SafeAreaProvider>
-        <Navigation colorScheme={colorScheme} />
-        {/* <StorybookUIRoot /> */}
-        <StatusBar style={colorScheme} />
-      </SafeAreaProvider>
+      <Provider store={store}>
+        <SafeAreaProvider>
+          <Navigation colorScheme={colorScheme} />
+          {/* <StorybookUIRoot /> */}
+          <StatusBar style={colorScheme} />
+        </SafeAreaProvider>
+      </Provider>
     </ThemeProvider>
   )
 }
